@@ -1,18 +1,33 @@
-def add_contact():
-    pass
+from helper_functions import *
 
-def delete_contact():
-    pass
+def prompt():
+    command = input("Pick: a/d/s/q: ")
+    if command == "a":
+        #return add_contact()
+        print("add")
+    elif command == "d":
+        #return delete_contact()
+        print("delete")
+    elif command == "s":
+        #return search_contact()
+        print("search")
+    if command == "q":
+        #return exit_program()
+        quit
 
-def search_contact():
-    pass
-
-def exit_program():
-    pass
 
 
 def main():
-    pass
-
-
+    while True:
+        print("'a' to add contact")
+        print("'d' to delete contact")
+        print("'s' to search contact")
+        print("'q' to exit contact book")
+        
+        try:
+            prompt()
+        except:
+            print("Invalid command")
+            continue
+        
 main()
