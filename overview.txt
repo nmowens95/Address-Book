@@ -1,0 +1,10 @@
+Store Contacts:
+- Create an Contact book txt file
+
+Functions:
+- Add contact
+- Delete contact
+    -add are you sure? prompt
+- Search contact   
+    -if contact not there return error
+- Exit program
