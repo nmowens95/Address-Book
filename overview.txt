@@ -1,8 +1,16 @@
 Store Contacts:
 - Create an Contact book txt file
 
+Create a REPL: read, evaluate, print, loop
+
 Functions:
+- Contacts
+    -keep list of contacts to call on
 - Add contact
+    -Name
+    -Number
+    -Email
+        -if there as a contact already, it should add another contact, not rewrite the previous
 - Delete contact
     -add are you sure? prompt
 - Search contact   
