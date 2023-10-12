@@ -1,3 +1,5 @@
+import json
+
 def create_file():
     pass
 
@@ -5,12 +7,12 @@ def add_contact():
     name = input("Name: ")
     number = input("Number: ")
     email = input("Email: ")
-    sub_direct: {}
-    new_contact: {name: sub_direct}
-    with open('contacts.txt') as reader:
-        pass # append to list and add to document
-
-
+    sub_direct = [name, number, email]
+    new_contact = {name: sub_direct}
+    file = open("contacts.txt", "a+")
+    file.write(json.dumps(new_contact))
+    file.write("\n")
+    file.close()
 
 
 def delete_contact():
