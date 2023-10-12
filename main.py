@@ -4,7 +4,7 @@ from helper_functions import *
 def prompt():
     command = input("Pick: a/d/s/q: ")
     if command == "q":
-        return exit_program
+        return exit_program()
     elif command == "a":
         return add_contact()
     elif command == "d":
@@ -19,7 +19,8 @@ def prompt():
 
 def main():
     while True:
-        print("'a' - to add contact")
+        print("--Contact Book--")
+        print("\n'a' - to add contact")
         print("'d' - to delete contact")
         print("'s' - to search contact")
         print("'q' - to exit contact book")
