@@ -13,14 +13,15 @@ def add_contact():
     file.close()
 
 
-def delete_contact(current_contacts):
+def delete_contact():
+    name = input("Name: ")
     with open("contacts.txt", "r") as r:
         lines = r.readlines()
     with open("contacts.txt", "w") as w:
         for line in lines:
             if line.strip("\n") != current_contacts:
                 w.write(line)
-
+# Need to add logic to check key value and delete dictionary if True
 
 def search_contact(current_contacts):
     with open("contacts.txt", "r"):
