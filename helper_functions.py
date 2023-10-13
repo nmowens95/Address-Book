@@ -1,4 +1,5 @@
 import json
+import os
 
 
 def add_contact():
@@ -13,27 +14,27 @@ def add_contact():
     file.close()
 
 
-def delete_contact():
-    name = input("Name: ")
-    with open("contacts.txt", "r") as r:
-        lines = r.readlines()
-    with open("contacts.txt", "w") as w:
-        for line in lines:
-            if line.strip("\n") != current_contacts:
-                w.write(line)
-# Need to add logic to check key value and delete dictionary if True
 
-def search_contact(current_contacts):
-    with open("contacts.txt", "r"):
-        for current in current_contacts:
-            try:
-                if current == current_contacts:
-                    return current
-            except Exception as err:
-                print(err)
+def delete_contact():
+    with open("contacts.txt", "r") as input:
+        with open("temt.txt", "w") as output:
+            keyword = input("Name: ")
+            for line in input:
+                if keyword not in line.strip("\n"):
+                    output.write(line)
+
+
+def search_contact():
+    with open("contacts.txt", "r") as f:
+        search = input("Search: ")
+        for _, line in enumerate(f):
+            if search in line:
+                print(line)
                 break
-                
-                    
+            else:
+                print("--No contact found--\n")
+
+
 def exit_program():
     print("\n--Exiting contacts--\n")
     return exit()
