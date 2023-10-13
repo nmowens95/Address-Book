@@ -12,8 +12,9 @@ def command_prompt():
         return delete_contact()
     if command == "s":
         return search_contact()
-    raise Exception("Try a prompted command \n")
-    
+    else: 
+        print("Try a prompted command \n")
+
 
 def main():
     while True:
