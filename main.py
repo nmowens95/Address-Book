@@ -6,15 +6,13 @@ def command_prompt():
     print()
     if command == "q":
         return exit_program()
-    elif command == "a":
+    if command == "a":
         return add_contact()
-    elif command == "d":
+    if command == "d":
         return delete_contact()
-    elif command == "s":
-        #return search_contact()
-        print("\nsearch\n")
-    else:
-        print("Try a prompted command \n")
+    if command == "s":
+        return search_contact()
+    raise Exception("Try a prompted command \n")
     
 
 def main():
